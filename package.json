@@ -1,0 +1,28 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "recording life.",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "NODE_ENV=production eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hipoyang/blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hipoyang/blog/issues"
+  },
+  "homepage": "https://github.com/hipoyang/blog#readme",
+  "dependencies": {
+    "eleventy-plugin-seo": "0.5.2",
+    "luxon": "2.3.0"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  }
+}
