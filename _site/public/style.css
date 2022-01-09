@@ -24,7 +24,8 @@ body {
   min-height: var(--wrapper-height);
   place-items: center;
 }
-.content {
+.content,
+.post {
   display: flex;
   flex-direction: column;
   max-width: 900px;
@@ -60,19 +61,19 @@ h5 {
   color: var(--color-text-main);
 }
 h1 {
-  font-size: 5rem;
+  font-size: 3rem;
 }
 h2 {
-  font-size: 4rem;
-}
-h3 {
   font-size: 2rem;
 }
-h4 {
+h3 {
   font-size: 1.5rem;
 }
-h5 {
+h4 {
   font-size: 1.25rem;
+}
+h5 {
+  font-size: 1rem;
 }
 small,
 .text_small {
@@ -116,7 +117,7 @@ a:hover {
   place-items: normal;
 }
 .postTitle {
-  font-size: 4rem;
+  font-size: 3rem;
   color: #000;
   line-height: 1.1;
   margin-bottom: 2rem;
