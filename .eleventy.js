@@ -1,4 +1,5 @@
 const { DateTime } = require("luxon");
+const eleventyRemark = require('@fec/eleventy-plugin-remark');
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.setTemplateFormats([
@@ -16,6 +17,7 @@ module.exports = function(eleventyConfig) {
     "woff2"
   ]);
   eleventyConfig.addPassthroughCopy("public");
+  eleventyConfig.addPlugin(eleventyRemark);
 
   // Filters let you modify the content https://www.11ty.dev/docs/filters/
   eleventyConfig.addFilter("htmlDateString", dateObj => {

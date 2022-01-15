@@ -4,7 +4,7 @@
   --color-primary: #FDCDC5;
   --wrapper-height: 85vh;
   --image-max-width: 320px;
-  --font-family: "-apple-system,system-ui,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Arial";
+  --font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Arial,Segoe UI,PingFang SC,Microsoft Yahei,Hiragino Sans GB,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji!important;
 }
 
 * {
@@ -124,4 +124,10 @@ a:hover {
 }
 .controls {
   margin: 3rem 0 2rem;
+}
+
+.avatar {
+  width: 80px;
+  border-radius: 50%;
+  margin: 16px 0;
 }

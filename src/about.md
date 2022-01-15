@@ -2,12 +2,6 @@
 layout: layouts/page.njk
 ---
 
-## About this site
+<img class="avatar" src="/public/avatar.png" alt="harper">
 
-Here you can write some details about you and your new blog: 
-
-- 🎉 I love blogging
-- 💥 I built this site using [Eleventy](https://www.11ty.dev/) on [Glitch](https://glitch.com/)
-- 🌈 Thanks for reading!
-
-You can also make your project available for other people to remix in Glitch! 🎏✨
+一个混迹于国内互联网前端无名开发者，一个理想主义拥趸者。

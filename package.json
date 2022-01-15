@@ -23,6 +23,7 @@
     "luxon": "2.3.0"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1"
+    "@11ty/eleventy": "^0.12.1",
+    "@fec/eleventy-plugin-remark": "^3.0.0"
   }
 }
