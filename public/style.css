@@ -54,7 +54,7 @@ h2,
 h3,
 h4,
 h5 {
-  margin: 2rem 0 .8rem;
+  margin: 2rem 0 .5rem;
   font-family: var(--font-family);
   font-weight: 600;
   line-height: 1.1;
@@ -117,13 +117,13 @@ a:hover {
   place-items: normal;
 }
 .postTitle {
-  font-size: 3rem;
+  font-size: 2rem;
   color: #000;
   line-height: 1.1;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .controls {
-  margin: 3rem 0 2rem;
+  margin: 2rem 0 1rem;
 }
 
 .avatar {

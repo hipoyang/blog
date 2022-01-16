@@ -24,6 +24,10 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
-    "@fec/eleventy-plugin-remark": "^3.0.0"
+    "@11ty/eleventy-plugin-rss": "^1.1.2",
+    "@fec/eleventy-plugin-remark": "^3.0.0",
+    "remark-gfm": "^3.0.1",
+    "remark-slug": "^7.0.1",
+    "remark-toc": "^8.0.1"
   }
 }

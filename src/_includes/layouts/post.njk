@@ -8,8 +8,9 @@ templateClass: tmpl-home
     {# The post front matter includes the title property #}
     <h2 class='postTitle'>{{title}}</h2>
 
-    {# ADD P ELEMENT FROM TODO ON THE NEXT LINE #}
-    
+    <div class="postTag">
+    {{ content | emojiReadTime }}
+    </div>
     {# Content from the body of the post markdown appears here #}
     {{ content | safe }}
     <div class="controls">

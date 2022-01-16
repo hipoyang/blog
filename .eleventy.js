@@ -1,5 +1,6 @@
 const { DateTime } = require("luxon");
-const eleventyRemark = require('@fec/eleventy-plugin-remark');
+const pluginRemark = require('@fec/eleventy-plugin-remark');
+const pluginRss = require('@11ty/eleventy-plugin-rss'); 
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.setTemplateFormats([
@@ -17,7 +18,6 @@ module.exports = function(eleventyConfig) {
     "woff2"
   ]);
   eleventyConfig.addPassthroughCopy("public");
-  eleventyConfig.addPlugin(eleventyRemark);
 
   // Filters let you modify the content https://www.11ty.dev/docs/filters/
   eleventyConfig.addFilter("htmlDateString", dateObj => {
@@ -51,6 +51,52 @@ module.exports = function(eleventyConfig) {
     }
 
     return coll;
+  });
+
+  eleventyConfig.addPlugin(pluginRemark, {
+    plugins: [
+      'remark-gfm', // 增强语法支持GFM
+      'remark-slug',
+      {
+        plugin: 'remark-toc', // 生成目录
+        options: {
+          heading: '目录',
+          maxDepth: 4,
+          ordered: true
+        }
+      }
+
+    ],
+  });
+  eleventyConfig.addPlugin(pluginRss, {
+    posthtmlRenderOptions: {}
+  });
+
+  eleventyConfig.addPlugin((eleventyConfig, options) => {
+    const defaults = {
+      wpm: 275,
+      showEmoji: true,
+      emoji: "🍿",
+      label: "min. read",
+      bucketSize: 5,
+    };
+  
+    eleventyConfig.addFilter("emojiReadTime", (content) => {
+      const { wpm, showEmoji, emoji, label, bucketSize } = {
+        ...defaults,
+        ...options,
+      };
+      const minutes = Math.ceil(content.trim().length / wpm);
+      const buckets = Math.round(minutes / bucketSize) || 1;
+  
+      let displayLabel = `${minutes} ${label}`;
+
+      if (showEmoji) {
+        displayLabel = `${new Array(buckets || 1).fill(emoji).join("")}  ${displayLabel}`;
+      }
+  
+      return displayLabel;
+    });
   });
 
   return {
