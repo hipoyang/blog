@@ -1,5 +1,6 @@
 ---
 layout: layouts/home.njk
+title: Home
 ---
 
 ## Harper's blog
