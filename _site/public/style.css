@@ -1,7 +1,7 @@
 :root {
-  --color-bg: #FFFFFF;
+  --color-bg: #F7F7F7;
   --color-text-main: #333333;
-  --color-primary: #FDCDC5;
+  --color-primary: #FBACA3;
   --wrapper-height: 85vh;
   --image-max-width: 320px;
   --font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Arial,Segoe UI,PingFang SC,Microsoft Yahei,Hiragino Sans GB,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji!important;
@@ -37,10 +37,22 @@ body {
   text-align: right;
   max-width: 900px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .links {
+  display: flex;
+  align-items: center;
 }
 
 .header .divider {
-  margin: 0 12px;
+  margin: 0 16px;
+  transform: rotate(30deg);
+  width: 1px;
+  height: 1.2rem;
+  background-color: var(--color-text-main);
 }
 
 /* Typography */
